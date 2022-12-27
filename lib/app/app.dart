@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
-import 'package:flutter_mvmm_tut/presentation/theme_manager.dart';
+
+import '../presentation/resources/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
   MyApp._internal(); // private named constructor
