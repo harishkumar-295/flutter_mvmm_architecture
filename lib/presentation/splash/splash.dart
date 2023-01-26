@@ -5,6 +5,8 @@ import 'package:flutter_mvmm_tut/presentation/resources/color_manager.dart';
 import 'package:flutter_mvmm_tut/presentation/resources/font_manager.dart';
 import 'package:flutter_mvmm_tut/presentation/resources/routes_manager.dart';
 
+import '../resources/assets_manager.dart';
+
 class SplashView extends StatefulWidget {
   SplashView({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
   Timer? _timer;
 
   _startDelay() {
-    _timer = Timer(Duration(seconds: 2), _goNext);
+    _timer = Timer(const Duration(seconds: 2), _goNext);
   }
 
   _goNext() {
@@ -39,15 +41,9 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.primary,
-      body: Center(
-        child: Text(
-          "TU",
-          style: TextStyle(
-            fontSize: FontSize.s18,
-            fontFamily: FontConstants.fontFamily,
-            fontWeight: FontWeightManager.bold,
-            color: ColorManager.white,
-          ),
+      body: const Center(
+        child: Image(
+          image: AssetImage(ImageAssets.splashLogo),
         ),
       ),
     );
